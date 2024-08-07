@@ -1,0 +1,43 @@
+<div class="new-note-form__wrapper">
+  <h2 class="new-note__header">Create new note</h2>
+  <form
+    class="new-note__form"
+    [formGroup]="newNoteForm"
+    (ngSubmit)="onSubmit()"
+  >
+    <div class="input__block">
+      <label for="title" class="form__label">Title:</label>
+      <input
+        type="text"
+        id="title"
+        name="title"
+        formControlName="title"
+        class="form__input"
+      />
+    </div>
+    <div class="input__block">
+      <label for="description" class="form__label">Description:</label>
+      <textarea
+        id="description"
+        name="description"
+        formControlName="description"
+        class="form__input"
+      ></textarea>
+    </div>
+    <div class="input__block">
+      <label for="date" class="form__label">Date:</label>
+      <input
+        type="date"
+        id="date"
+        name="date"
+        formControlName="date"
+        class="form__input"
+      />
+    </div>
+    <div class="form-btn__block">
+      <button type="button" [routerLink]="['/main']">Go to main</button>
+      <button type="button" (click)="clearForm()">Clear form</button>
+      <button type="submit">Create</button>
+    </div>
+  </form>
+</div>

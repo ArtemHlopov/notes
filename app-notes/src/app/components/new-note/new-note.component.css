@@ -1,0 +1,40 @@
+.new-note-form__wrapper {
+  width: 70vw;
+  padding: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.new-note__header {
+  margin-bottom: 3vh;
+}
+.new-note__form {
+  padding: 2vw;
+  border: 1px solid black;
+  border-radius: 1vw;
+}
+.input__block {
+  display: flex;
+}
+.form__label,
+.form__input {
+  display: block;
+  margin-bottom: 1vh;
+  margin-right: 1vw;
+}
+.form__input {
+  width: 100%;
+}
+.form-btn__block {
+  display: flex;
+  justify-content: space-around;
+}
+@media screen and (max-width: 400px) {
+  .form-btn__block {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .input__block {
+    flex-direction: column;
+  }
+}

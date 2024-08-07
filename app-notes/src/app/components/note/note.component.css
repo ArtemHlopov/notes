@@ -1,0 +1,33 @@
+.note__wrapper {
+  width: 70vw;
+  padding: 5vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.note-btn__block {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2vh;
+}
+.current-note {
+  border: 1px solid black;
+  border-radius: 2vw;
+  padding: 2vw;
+  max-width: 100%;
+}
+.note__title,
+.note__description {
+  margin-bottom: 2vw;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+.note__input,
+.note__area {
+  display: block;
+  outline: none;
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 2vw;
+}

@@ -1,0 +1,27 @@
+@if(data$|async; as data){
+<div class="note__wrapper">
+  <div class="current-note">
+    @if(isEditable){
+    <div class="note-btn__block">
+      <button (click)="saveData(data.id, title.value, area.value)">Save</button>
+      <button (click)="removeNote(data.id)">Delete</button>
+    </div>
+
+    <input type="text" value="{{ data.title }}" #title class="note__input" />
+    <textarea name="" id="" cols="30" rows="10" class="note__area" #area>{{
+      data.description
+    }}</textarea>
+
+    }@else{
+    <div class="note-btn__block">
+      <button (click)="editMode()">Edit</button>
+      <button (click)="removeNote(data.id)">Delete</button>
+    </div>
+    <h2 class="note__title">{{ data.title }}</h2>
+    <div class="note__description">{{ data.description }}</div>
+    }
+  </div>
+</div>
+} @else{
+<h2 class="note__wrapper">Please select note</h2>
+}

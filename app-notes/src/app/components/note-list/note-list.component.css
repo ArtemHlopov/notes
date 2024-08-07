@@ -1,0 +1,51 @@
+.note-list__wrapper {
+  min-width: 30vw;
+  padding: 1vw;
+}
+.search__form,
+.note-list__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1vw;
+}
+.note-list {
+  max-height: 80vh;
+  overflow-y: auto;
+}
+.note {
+  border-radius: 5px;
+  border: 1px solid black;
+  margin-bottom: 1vh;
+  max-width: 25vw;
+  padding: 1vh;
+  position: relative;
+}
+.note__title,
+.note__description {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.delete__btn {
+  position: absolute;
+  top: 1vh;
+  right: 1vh;
+  display: none;
+}
+.note:hover .delete__btn {
+  display: block;
+}
+.active-link {
+  background: gray;
+}
+.note {
+  cursor: pointer;
+}
+@media screen and (max-width: 600px) {
+  .note-list {
+    max-width: 90vw;
+    display: flex;
+    gap: 5px;
+    overflow-x: auto;
+  }
+}
